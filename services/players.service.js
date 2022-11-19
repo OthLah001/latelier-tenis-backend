@@ -13,7 +13,18 @@ const fetchAllPlayers = () => {
   return players;
 };
 
+const fetchPlayerById = (id) => {
+  // Mock calling the db
+  const players = require("../database.json").players;
+
+  const player = players.find(
+    p => p.id == id
+  );
+  return player;
+}
+
 
 module.exports = {
-  fetchAllPlayers
+  fetchAllPlayers,
+  fetchPlayerById
 };
