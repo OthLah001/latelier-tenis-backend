@@ -13,10 +13,10 @@ You need to install:
 
 ## Clone the repo and install the packages
 
-$ git clone https://github.com/OthLah001/latelier-tenis-frontend.git
-$ cd latelier-tenis-frontend.git
-$ npm i
+    $ git clone https://github.com/OthLah001/latelier-tenis-backend.git
+    $ cd latelier-tenis-backend
+    $ npm i
 
 ## Run the server
 
-$ npm start
+    $ npm start
