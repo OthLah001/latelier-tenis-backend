@@ -6,7 +6,7 @@
 
 # Real Demo
 
-[Click Here](https://latelier-tenis-frontend.herokuapp.com/).
+[Click Here](v).
 The project is deployed on heroku Free Dyno, that's why it's slow in the beginning.
 
 # Local Demo
