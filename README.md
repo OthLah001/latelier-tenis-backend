@@ -14,8 +14,8 @@ The project is deployed on heroku Free Dyno, that's why it's slow in the beginni
 ## Requirements
 
 You need to install:
-* NodeJs: [Node.js](https://nodejs.org/)
-* NPM: [NPM](https://npmjs.org/)
+* [Node.js](https://nodejs.org/)
+* [NPM](https://npmjs.org/)
 
 ## Clone the repo and install the packages
 
