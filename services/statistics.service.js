@@ -7,7 +7,7 @@ const getCountryBigRatio = (winRecords) => {
     const newRatio = country.records.reduce((acc, curr) => acc + curr, 0) / country.records.length;
     if (newRatio > maxRatio) {
       maxRatio = newRatio;
-      winCountry = country
+      winCountry = country;
     }
   }
 
@@ -49,7 +49,8 @@ const fetchAllStatistics = () => {
     // get the record of each country in one place
     winRecords[player.country.code] = {
       code: player.country.code,
-      records: [...(winRecords[player.country.code]?.records || []), ...player.data.last]
+      records: [...(winRecords[player.country.code]?.records || []), ...player.data.last],
+      picture: player.country.picture
     }
   }
 
