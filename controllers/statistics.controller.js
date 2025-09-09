@@ -1,4 +1,5 @@
 const { fetchAllStatistics } = require("../services/statistics.service");
+const one = 1;
 
 
 const getAllStatistics = (req, res, next) => {
