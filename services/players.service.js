@@ -1,6 +1,4 @@
 
-
-
 const fetchAllPlayers = () => {
   // Mock calling the db
   const players = require("../database.json").players;
