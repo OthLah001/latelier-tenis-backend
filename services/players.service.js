@@ -2,7 +2,6 @@
 const fetchAllPlayers = () => {
   // Mock calling the db
   const players = require("../database.json").players;
-  const hello = "hello";
 
   players.sort(
     (p1, p2) => p1.data.rank > p2.data.rank ? 1 : 
