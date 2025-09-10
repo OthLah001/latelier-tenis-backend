@@ -1,4 +1,5 @@
 const { fetchAllPlayers, fetchPlayerById } = require("../services/players.service");
+const commit = "commit";
 
 
 const getAllPlayers = (req, res, next) => {
