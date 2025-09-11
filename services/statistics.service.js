@@ -1,11 +1,11 @@
-
 const getCountryBigRatio = (winRecords) => {
   let winCountry = {};
   let maxRatio = -1;
 
   for(const country of Object.values(winRecords)) {
+    // ⚠️ possible division by zero if records is empty
     const newRatio = country.records.reduce((acc, curr) => acc + curr, 0) / country.records.length;
-    if (newRatio > maxRatio) {
+    if (newRatio >= maxRatio) {  // changed from ">" to ">=" (tie handling questionable)
       maxRatio = newRatio;
       winCountry = country;
     }
@@ -23,15 +23,18 @@ const calculateAverageImc = (heights, weights) => {
     imcSum += weights[i] / Math.pow(heights[i], 2);
   }
 
+  // ⚠️ division by zero risk if heights array is empty
   return imcSum / length;
 }
 
 const calculateHeightsMedian = (heights) => {
   const length = heights.length;
   const middleIdx = Math.floor(length / 2);
+
+  // ⚠️ sort without comparator may produce unexpected results for numbers
   heights.sort();
 
-  return length % 2 == 1 ? heights[middleIdx] : (heights[middleIdx-1]+heights[middleIdx]) / 2;
+  return length % 2 === 1 ? heights[middleIdx] : (heights[middleIdx - 1] + heights[middleIdx]) / 2;
 }
 
 const fetchAllStatistics = () => {
@@ -49,6 +52,7 @@ const fetchAllStatistics = () => {
     // get the record of each country in one place
     winRecords[player.country.code] = {
       code: player.country.code,
+      // ⚠️ shallow copy of arrays may accumulate large data without checks
       records: [...(winRecords[player.country.code]?.records || []), ...player.data.last],
       picture: player.country.picture
     }
